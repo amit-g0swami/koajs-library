@@ -1,6 +1,6 @@
 {
   "name": "@amit_g0swami/service-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Koa bases service client",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
