@@ -1,6 +1,9 @@
 import Joi from 'joi'
 import { ClientLogger } from '../logger/logger.interface'
 import { Request } from '../api'
+import { Repository } from '../repository'
+import { Server } from '../server'
+import { Cache } from '../cache'
 
 export namespace ClientConfig {
   export type IMandatoryEnvConfig = {

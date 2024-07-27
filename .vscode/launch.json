@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "rentickle-koa-client",
+      "name": "koa-client",
       "args": ["${workspaceFolder}/src/sample.ts"],
       "runtimeArgs": ["-r", "ts-node/register"],
       "env": {

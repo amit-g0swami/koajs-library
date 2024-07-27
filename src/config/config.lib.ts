@@ -6,6 +6,8 @@ import { ClientLogger } from '../logger/logger.interface'
 import { ClientError } from '../error'
 import { Response } from '../api'
 import { Logger } from '../logger'
+import { RedisCache } from '../cache/redis.lib'
+import { ClientAuth } from '../auth'
 
 class KoaClientConfig<IEnvConfig extends ClientConfig.IBaseEnvConfig> {
   declare serviceConfig: ClientConfig.IServiceConfig<IEnvConfig>
@@ -76,7 +78,7 @@ class KoaClientConfig<IEnvConfig extends ClientConfig.IBaseEnvConfig> {
           )
 
           this.serviceConfig.Caches.push(
-            new RedisCache(Auth.AUTH_TOKEN_CACHE_NAME)
+            new RedisCache(ClientAuth.AUTH_TOKEN_CACHE_NAME)
           )
         }
         break
@@ -92,7 +94,7 @@ class KoaClientConfig<IEnvConfig extends ClientConfig.IBaseEnvConfig> {
           )
 
           this.serviceConfig.Caches.push(
-            new RedisCache(Auth.RSA_PUBLIC_KEY_CACHE_NAME)
+            new RedisCache(ClientAuth.RSA_PUBLIC_KEY_CACHE_NAME)
           )
         }
         break
